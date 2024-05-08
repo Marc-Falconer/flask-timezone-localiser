@@ -5,7 +5,7 @@ This Flask application provides a simple API for localising date and time to var
 ## Usage
 
 ### Localise timezones:
-To use the API, send a GET request to the endpoint root with the following parameters:
+To use the API, send a GET request to the endpoint root *'http://<url>:<port>/'* with the following parameters:
 
 #### Required parameters:
 **datetime:** String format of the timestamp in the from_tz timezone. Example: '2024-05-08 15:30:00'\
@@ -33,7 +33,7 @@ The API endpoint with response with a an appropriate status code. The body will 
 }
 ```
 
-##### Failed Vaildation Example:
+##### Failed Vaildation  Example:
 ```jsonc
 {
     "data": {
@@ -49,4 +49,4 @@ The API endpoint with response with a an appropriate status code. The body will 
 ```
 
 ### Received list of available timezones:
-To received list of available timezones, send a GET request to the endpoint *'/timezones'*
+To received list of available timezones, send a GET request to the endpoint *'http://<url>:<port>/timezones'*
