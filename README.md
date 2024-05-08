@@ -19,6 +19,7 @@ To use the API, send a GET request to the endpoint root with the following param
 The API endpoint with response with a an appropriate status code. The body will includ a JSON message with the localised time or any validion errors encounted.
 
 ##### Successful Example:
+```jsonc
 {
     "data": {
         "converted_datetime": "2024-05-07 23:30:00",
@@ -30,7 +31,10 @@ The API endpoint with response with a an appropriate status code. The body will 
     "error": false,
     "status_code": 200
 }
-##### Failed Vaildatio Example:
+```
+
+##### Failed Vaildation Example:
+```jsonc
 {
     "data": {
         "Missing required parameter(s)": [
@@ -42,6 +46,7 @@ The API endpoint with response with a an appropriate status code. The body will 
     "error": true,
     "status_code": 422
 }
+```
 
 ### Received list of available timezones:
 To received list of available timezones, send a GET request to the endpoint *'/timezones'*
