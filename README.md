@@ -17,7 +17,7 @@ docker run -v /var/log/projects:/app/logs -p 5001:5001 marcfalconer/flask-timezo
 
 ## Test Server
 
-You can test out this api using my test server using the folloing url: [https://projects.falconerdigital.co.nz/localise_timezone](https://projects.falconerdigital.co.nz/localise_timezone) 
+You can check out this API using my test server at folloing url: [https://projects.falconerdigital.co.nz/localise_timezone](https://projects.falconerdigital.co.nz/localise_timezone) 
 
 
 ## Postman collection
