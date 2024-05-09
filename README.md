@@ -2,15 +2,25 @@
 
 This Flask application provides a simple API for localising date and time to various timezones. Users can easily convert a date and time to a different timezone using this application.\\
 
-By default this Flask runs on port *5001*. You can also mount the log directory to your filesystem. The log path in the container is '/app/logs'.\
+## Docker Image
 
 This repository is available as a docker image. [View on Docker Hub](https://hub.docker.com/repository/docker/marcfalconer/flask-timezone-localiser/general).
 
+By default this Flask runs on port *5001*. You can also mount the log directory to your filesystem. The log path in the container is '/app/logs'.\
 
-## Usage
+```console
+docker pull marcfalconer/flask-timezone-localiser
+docker run -v /var/log/projects:/app/logs -p 5001:5001 marcfalconer/flask-timezone-localiser
+```
+
+## API Usage
 
 ### Localise timezones:
 To use the API, send a GET request to the endpoint root with the following parameters:
+
+```console
+curl -X GET "https://projects.falconerdigital.co.nz/localise_timezone?datetime=2024-05-08%2012:30:45&from_tz=Pacific/Auckland&to_tz=America/New_York"
+```
 
 #### Required parameters:
 **datetime:** String format of the timestamp in the from_tz timezone. Example: '2024-05-08 15:30:00'\
@@ -55,3 +65,7 @@ The API endpoint with response with a an appropriate status code. The body will 
 
 ### Received list of available timezones:
 To received list of available timezones, send a GET request to the endpoint *'/timezones'*
+
+```console
+curl -X GET "https://projects.falconerdigital.co.nz/localise_timezone/timezones"
+```
