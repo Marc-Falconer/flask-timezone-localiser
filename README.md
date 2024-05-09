@@ -4,7 +4,9 @@ This Flask application provides a simple API for localising date and time to var
 
 By default this Flask runs on port *5001*. You can also mount the log directory to your filesystem. The log path in the container is '/app/logs'.\
 
-This repository is available as a docker image. [View on Docker Hub](https://hub.docker.com/repository/docker/marcfalconer/flask-timezone-localiser/general).
+## Docker Image
+
+This repository is available as a docker image: [View on Docker Hub](https://hub.docker.com/repository/docker/marcfalconer/flask-timezone-localiser/general).
 
 By default this Flask runs on port *5001*. You can also mount the log directory to your filesystem. The log path in the container is '/app/logs'.\
 
@@ -13,11 +15,21 @@ docker pull marcfalconer/flask-timezone-localiser
 docker run -v /var/log/projects:/app/logs -p 5001:5001 marcfalconer/flask-timezone-localiser
 ```
 
+## Test Server
+
+You can test out this api using my test server using the folloing url: [https://projects.falconerdigital.co.nz/localise_timezone](https://projects.falconerdigital.co.nz/localise_timezone) 
+
+
+## Postman collection
+
+Postman collection available: [Postman Collection](https://www.postman.com/interstellar-rocket-53991/workspace/projects/request/19905884-486361f4-a008-4bf5-b1bf-9f7a6ee62b59)
+
 ## API Usage
 
 ### Localise timezones:
 To use the API, send a GET request to the endpoint root with the following parameters:
 
+Try it out on the test setver the curl command below.
 ```console
 curl -X GET "https://projects.falconerdigital.co.nz/localise_timezone?datetime=2024-05-08%2012:30:45&from_tz=Pacific/Auckland&to_tz=America/New_York"
 ```
@@ -66,6 +78,7 @@ The API endpoint with response with a an appropriate status code. The body will 
 ### Received list of available timezones:
 To received list of available timezones, send a GET request to the endpoint *'/timezones'*
 
+Try it out on the test setver the curl command below.
 ```console
 curl -X GET "https://projects.falconerdigital.co.nz/localise_timezone/timezones"
 ```
