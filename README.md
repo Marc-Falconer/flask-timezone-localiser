@@ -1,14 +1,14 @@
 # Flask Timezone Localiser
 
-This Flask application provides a simple API for localising date and time to various timezones. Users can easily convert a date and time to a different timezone using this application.\\
+This Flask application provides a simple API for localising date and time to various timezones. Users can easily convert a date and time to a different timezone using this application.\
 
-By default this Flask runs on port *5001*. You can also mount the log directory to your filesystem. The log path in the container is '/app/logs'.\
+By default this Flask runs on port *5001*. You can also mount the log directory to your filesystem. The log path in the container is '/app/logs'.
 
 ## Docker Image
 
 This repository is available as a docker image: [View on Docker Hub](https://hub.docker.com/repository/docker/marcfalconer/flask-timezone-localiser/general).
 
-By default this Flask runs on port *5001*. You can also mount the log directory to your filesystem. The log path in the container is '/app/logs'.\
+By default this Flask runs on port *5001*. You can also mount the log directory to your filesystem. The log path in the container is '/app/logs'.
 
 ```console
 docker pull marcfalconer/flask-timezone-localiser
